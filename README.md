@@ -11,4 +11,7 @@ https://www.microsoft.com/en-us/download/details.aspx?id=6812
 It would be nice to modernize the DirectX usage.  Some notes about replacement packages are available here:
 https://stackoverflow.com/questions/33873592/where-i-can-find-microsoft-directx-assembly-to-reference
 
-Sample configuration files are included in the config directory.  To see all the puzzles, you will want to copy these to the directory where the built executable lives.
+### Troubleshooting
+- When you install DirectX, if you see Error code S1023, please follow this link: https://stackoverflow.com/questions/4102259/directx-sdk-june-2010-installation-problems-error-code-s1023 to uninstall a newer version of Visual C++ 2010 Redistributable Package, install DirectX, and run Windows Update to get the redistributable package back.
+- When you run the project in Visual Studio and see BadImageFormatException and if your platform selector shows "AnyCPU", please select "x86" instead.
+- When you run the project in Visual Studio and see a "LoaderLock occurred" error, please uncheck "Break when this exception type is thrown", and click "Continue" to ignore it. If your Visual Studio doesn't have this option, follow https://stackoverflow.com/questions/56642/loader-lock-error to ignore this type of exceptions in a menu.
